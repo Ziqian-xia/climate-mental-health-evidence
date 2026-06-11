@@ -1,0 +1,36 @@
+TITLE-ABS-KEY(
+  (heat OR cold OR heatwave* OR "heat wave*" OR "heat stress" OR "thermal stress" OR
+   "Wet Bulb Globe Temperature" OR WBGT OR "apparent temperature" OR
+   "heat index" OR humidex OR "Universal Thermal Climate Index" OR UTCI OR
+   "Physiologically Equivalent Temperature" OR "diurnal temperature range" OR
+   "cold snap*" OR "cold spell*" OR "cold wave*" OR frost OR
+   wildfire* OR bushfire* OR "forest fire*" OR "landscape fire*" OR
+   "peat fire*" OR "savanna fire*" OR "grassland fire*" OR
+   "smoke plume*" OR "smoke exposure" OR "smoke day*" OR "fire smoke" OR
+   "biomass burning" OR "prescribed burn*" OR "controlled burn*" OR
+   flood* OR inundat* OR "storm surge*" OR "river overflow" OR "dam failure" OR
+   "levee failure" OR "levee breach" OR "dike failure" OR "dyke failure" OR
+   "glacial lake outburst" OR GLOF OR
+   hurricane* OR cyclone* OR typhoon* OR "tropical storm*" OR
+   windstorm* OR "wind damage" OR "Saffir-Simpson" OR IBTrACS OR
+   drought* OR arid* OR "water scarcity" OR "water stress" OR "water deficit" OR
+   "dry spell*" OR "dry season" OR "rainfall deficit" OR "precipitation deficit" OR
+   "soil moisture" OR SPEI OR PDSI OR "Palmer Drought" OR SPI OR
+   "Standardised Precipitation" OR "Standardized Precipitation" OR desertification)
+  AND
+  ("mental health" OR "mental disorder*" OR psychopatholog* OR
+   "psychological distress" OR "psychological stress" OR
+   depressi* OR anxiety OR
+   PTSD OR "post-traumatic stress" OR "posttraumatic stress" OR
+   suicid* OR "self-harm" OR "self harm" OR NSSI OR
+   "emergency department" OR "ED visit*" OR "psychiatric admission*" OR
+   hospitali* OR "mental health service*" OR "psychiatric service*" OR
+   wellbeing OR "well-being" OR "well being" OR
+   "life satisfaction" OR happiness OR "positive affect" OR "negative affect" OR
+   "quality of life" OR "quality-of-life" OR
+   "eco-anxiety" OR "climate anxiety" OR solastalgia OR "ecological grief" OR
+   "climate-related distress" OR
+   PHQ-9 OR GAD-7 OR K6 OR K10 OR Kessler OR GHQ-12 OR MHI-5 OR
+   CES-D OR "Beck Depression" OR BDI OR HADS OR PCL-5 OR IES-R OR PSS OR
+   "Cantril Ladder" OR SWLS OR PANAS OR "climate anxiety scale")
+)

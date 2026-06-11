@@ -1,0 +1,319 @@
+{
+  "total_stored": 59721,
+  "unique_eids": 59721,
+  "buckets": [
+    {
+      "bucket": "y1990",
+      "expected": 256,
+      "scopus_count": 256,
+      "stored": 256,
+      "api_calls": 12,
+      "elapsed_s": 14.9
+    },
+    {
+      "bucket": "y1991",
+      "expected": 254,
+      "scopus_count": 254,
+      "stored": 254,
+      "api_calls": 12,
+      "elapsed_s": 17.5
+    },
+    {
+      "bucket": "y1992",
+      "expected": 233,
+      "scopus_count": 233,
+      "stored": 233,
+      "api_calls": 11,
+      "elapsed_s": 13.7
+    },
+    {
+      "bucket": "y1993",
+      "expected": 287,
+      "scopus_count": 287,
+      "stored": 287,
+      "api_calls": 13,
+      "elapsed_s": 15.8
+    },
+    {
+      "bucket": "y1994",
+      "expected": 275,
+      "scopus_count": 275,
+      "stored": 275,
+      "api_calls": 12,
+      "elapsed_s": 14.6
+    },
+    {
+      "bucket": "y1995",
+      "expected": 297,
+      "scopus_count": 297,
+      "stored": 297,
+      "api_calls": 13,
+      "elapsed_s": 16.1
+    },
+    {
+      "bucket": "y1996",
+      "expected": 373,
+      "scopus_count": 373,
+      "stored": 373,
+      "api_calls": 16,
+      "elapsed_s": 19.6
+    },
+    {
+      "bucket": "y1997",
+      "expected": 421,
+      "scopus_count": 421,
+      "stored": 421,
+      "api_calls": 18,
+      "elapsed_s": 23.3
+    },
+    {
+      "bucket": "y1998",
+      "expected": 451,
+      "scopus_count": 451,
+      "stored": 451,
+      "api_calls": 20,
+      "elapsed_s": 25.7
+    },
+    {
+      "bucket": "y1999",
+      "expected": 447,
+      "scopus_count": 447,
+      "stored": 447,
+      "api_calls": 19,
+      "elapsed_s": 24.6
+    },
+    {
+      "bucket": "y2000",
+      "expected": 461,
+      "scopus_count": 461,
+      "stored": 461,
+      "api_calls": 20,
+      "elapsed_s": 24.8
+    },
+    {
+      "bucket": "y2001",
+      "expected": 489,
+      "scopus_count": 489,
+      "stored": 489,
+      "api_calls": 21,
+      "elapsed_s": 26.7
+    },
+    {
+      "bucket": "y2002",
+      "expected": 564,
+      "scopus_count": 564,
+      "stored": 564,
+      "api_calls": 24,
+      "elapsed_s": 30.0
+    },
+    {
+      "bucket": "y2003",
+      "expected": 621,
+      "scopus_count": 621,
+      "stored": 621,
+      "api_calls": 26,
+      "elapsed_s": 34.0
+    },
+    {
+      "bucket": "y2004",
+      "expected": 746,
+      "scopus_count": 746,
+      "stored": 746,
+      "api_calls": 31,
+      "elapsed_s": 48.0
+    },
+    {
+      "bucket": "y2005",
+      "expected": 854,
+      "scopus_count": 854,
+      "stored": 854,
+      "api_calls": 36,
+      "elapsed_s": 47.6
+    },
+    {
+      "bucket": "y2006",
+      "expected": 973,
+      "scopus_count": 973,
+      "stored": 973,
+      "api_calls": 40,
+      "elapsed_s": 53.8
+    },
+    {
+      "bucket": "y2007",
+      "expected": 1022,
+      "scopus_count": 1022,
+      "stored": 1022,
+      "api_calls": 42,
+      "elapsed_s": 56.2
+    },
+    {
+      "bucket": "y2008",
+      "expected": 1226,
+      "scopus_count": 1226,
+      "stored": 1226,
+      "api_calls": 51,
+      "elapsed_s": 67.3
+    },
+    {
+      "bucket": "y2009",
+      "expected": 1312,
+      "scopus_count": 1312,
+      "stored": 1312,
+      "api_calls": 54,
+      "elapsed_s": 91.2
+    },
+    {
+      "bucket": "y2010",
+      "expected": 1266,
+      "scopus_count": 1266,
+      "stored": 1266,
+      "api_calls": 52,
+      "elapsed_s": 70.0
+    },
+    {
+      "bucket": "y2011",
+      "expected": 1403,
+      "scopus_count": 1403,
+      "stored": 1403,
+      "api_calls": 58,
+      "elapsed_s": 76.9
+    },
+    {
+      "bucket": "y2012",
+      "expected": 1502,
+      "scopus_count": 1502,
+      "stored": 1502,
+      "api_calls": 62,
+      "elapsed_s": 84.4
+    },
+    {
+      "bucket": "y2013",
+      "expected": 1587,
+      "scopus_count": 1587,
+      "stored": 1587,
+      "api_calls": 65,
+      "elapsed_s": 101.6
+    },
+    {
+      "bucket": "y2014",
+      "expected": 1686,
+      "scopus_count": 1686,
+      "stored": 1686,
+      "api_calls": 69,
+      "elapsed_s": 95.2
+    },
+    {
+      "bucket": "y2015",
+      "expected": 1701,
+      "scopus_count": 1701,
+      "stored": 1701,
+      "api_calls": 70,
+      "elapsed_s": 99.0
+    },
+    {
+      "bucket": "y2016",
+      "expected": 1873,
+      "scopus_count": 1873,
+      "stored": 1873,
+      "api_calls": 76,
+      "elapsed_s": 117.2
+    },
+    {
+      "bucket": "y2017",
+      "expected": 1960,
+      "scopus_count": 1960,
+      "stored": 1960,
+      "api_calls": 80,
+      "elapsed_s": 111.9
+    },
+    {
+      "bucket": "y2018",
+      "expected": 2097,
+      "scopus_count": 2097,
+      "stored": 2097,
+      "api_calls": 85,
+      "elapsed_s": 122.0
+    },
+    {
+      "bucket": "y2019",
+      "expected": 2536,
+      "scopus_count": 2536,
+      "stored": 2536,
+      "api_calls": 103,
+      "elapsed_s": 149.3
+    },
+    {
+      "bucket": "y2020",
+      "expected": 3035,
+      "scopus_count": 3035,
+      "stored": 3035,
+      "api_calls": 123,
+      "elapsed_s": 180.0
+    },
+    {
+      "bucket": "y2021",
+      "expected": 3608,
+      "scopus_count": 3608,
+      "stored": 3608,
+      "api_calls": 146,
+      "elapsed_s": 208.6
+    },
+    {
+      "bucket": "y2022",
+      "expected": 3888,
+      "scopus_count": 3888,
+      "stored": 3888,
+      "api_calls": 157,
+      "elapsed_s": 240.9
+    },
+    {
+      "bucket": "y2023",
+      "expected": 4081,
+      "scopus_count": 4081,
+      "stored": 4081,
+      "api_calls": 165,
+      "elapsed_s": 2519.0
+    },
+    {
+      "bucket": "y2024",
+      "expected": 4736,
+      "scopus_count": 4736,
+      "stored": 4736,
+      "api_calls": 191,
+      "elapsed_s": 298.1
+    },
+    {
+      "bucket": "2025_ar_re",
+      "expected": null,
+      "scopus_count": 4449,
+      "stored": 4449,
+      "api_calls": 179,
+      "elapsed_s": 309.5
+    },
+    {
+      "bucket": "2025_other",
+      "expected": null,
+      "scopus_count": 789,
+      "stored": 789,
+      "api_calls": 33,
+      "elapsed_s": 48.5
+    },
+    {
+      "bucket": "y2026",
+      "expected": 2183,
+      "scopus_count": 2183,
+      "stored": 2183,
+      "api_calls": 89,
+      "elapsed_s": 141.2
+    },
+    {
+      "bucket": "pre1990",
+      "expected": 3779,
+      "scopus_count": 3779,
+      "stored": 3779,
+      "api_calls": 153,
+      "elapsed_s": 247.9
+    }
+  ],
+  "grand_elapsed_s": 5886.5
+}

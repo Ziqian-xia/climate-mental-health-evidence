@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.python-version
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local API keys / secrets — never commit these
+.env
+.env.*
+*.key
+*_secret*
+keys.txt
+
+# Local run outputs (use `output_*` naming as a defensive default)
+output_*/
+local_run_*/
+
+# Large intermediate artefacts (>50 MB) outside of `data/`
+*.tmp.jsonl
+*.tmp.csv

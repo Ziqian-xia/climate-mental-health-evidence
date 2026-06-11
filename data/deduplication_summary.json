@@ -1,0 +1,16 @@
+{
+  "pubmed_total": 27731,
+  "pubmed_with_doi": 24882,
+  "pubmed_no_doi": 2845,
+  "scopus_total": 59721,
+  "scopus_with_doi": 52731,
+  "scopus_no_doi": 6912,
+  "doi_overlap": 15020,
+  "pubmed_only_doi": 9862,
+  "scopus_only_doi": 37711,
+  "doi_union": 62593,
+  "raw_sum_pre_dedup": 87452,
+  "final_pool_after_doi_dedup": 72350,
+  "pubmed_in_scopus_pct": 60.4,
+  "scopus_in_pubmed_pct": 28.5
+}

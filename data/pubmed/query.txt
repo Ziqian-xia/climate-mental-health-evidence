@@ -1,0 +1,57 @@
+(
+  "Hot Temperature"[Mesh] OR "Cold Temperature"[Mesh] OR
+  "Wildfires"[Mesh] OR "Fires"[Mesh] OR "Smoke"[Mesh] OR
+  "Particulate Matter"[Mesh] OR
+  "Floods"[Mesh] OR "Cyclonic Storms"[Mesh] OR "Droughts"[Mesh] OR
+  heat[tiab] OR cold[tiab] OR heatwave*[tiab] OR "heat wave*"[tiab] OR
+  "heat stress"[tiab] OR "thermal stress"[tiab] OR
+  "Wet Bulb Globe Temperature"[tiab] OR WBGT[tiab] OR
+  "apparent temperature"[tiab] OR "heat index"[tiab] OR humidex[tiab] OR
+  "Universal Thermal Climate Index"[tiab] OR UTCI[tiab] OR
+  "Physiologically Equivalent Temperature"[tiab] OR "diurnal temperature range"[tiab] OR
+  "cold snap*"[tiab] OR "cold spell*"[tiab] OR "cold wave*"[tiab] OR frost[tiab] OR
+  wildfire*[tiab] OR bushfire*[tiab] OR "forest fire*"[tiab] OR "landscape fire*"[tiab] OR
+  "peat fire*"[tiab] OR "savanna fire*"[tiab] OR "grassland fire*"[tiab] OR
+  "smoke plume*"[tiab] OR "smoke exposure"[tiab] OR "smoke day*"[tiab] OR
+  "fire smoke"[tiab] OR "biomass burning"[tiab] OR "prescribed burn*"[tiab] OR
+  "controlled burn*"[tiab] OR
+  flood*[tiab] OR inundat*[tiab] OR "storm surge*"[tiab] OR "river overflow"[tiab] OR
+  "dam failure"[tiab] OR "levee failure"[tiab] OR "levee breach"[tiab] OR
+  "dike failure"[tiab] OR "dyke failure"[tiab] OR
+  "glacial lake outburst"[tiab] OR GLOF[tiab] OR
+  hurricane*[tiab] OR cyclone*[tiab] OR typhoon*[tiab] OR "tropical storm*"[tiab] OR
+  windstorm*[tiab] OR "wind damage"[tiab] OR "Saffir-Simpson"[tiab] OR IBTrACS[tiab] OR
+  drought*[tiab] OR arid*[tiab] OR "water scarcity"[tiab] OR "water stress"[tiab] OR
+  "water deficit"[tiab] OR "dry spell*"[tiab] OR "dry season"[tiab] OR
+  "rainfall deficit"[tiab] OR "precipitation deficit"[tiab] OR "soil moisture"[tiab] OR
+  SPEI[tiab] OR PDSI[tiab] OR "Palmer Drought"[tiab] OR SPI[tiab] OR
+  "Standardised Precipitation"[tiab] OR "Standardized Precipitation"[tiab] OR
+  desertification[tiab]
+)
+AND
+(
+  "Mental Health"[Mesh] OR "Mental Disorders"[Mesh] OR "Depression"[Mesh] OR
+  "Anxiety"[Mesh] OR "Stress Disorders, Post-Traumatic"[Mesh] OR
+  "Stress, Psychological"[Mesh] OR "Suicide"[Mesh] OR
+  "Self-Injurious Behavior"[Mesh] OR "Quality of Life"[Mesh] OR
+  "Hospitalization"[Mesh] OR
+  "mental health"[tiab] OR "mental disorder*"[tiab] OR psychopatholog*[tiab] OR
+  "psychological distress"[tiab] OR "psychological stress"[tiab] OR
+  depressi*[tiab] OR anxiety[tiab] OR
+  PTSD[tiab] OR "post-traumatic stress"[tiab] OR "posttraumatic stress"[tiab] OR
+  suicid*[tiab] OR "self-harm"[tiab] OR "self harm"[tiab] OR NSSI[tiab] OR
+  "emergency department"[tiab] OR "ED visit*"[tiab] OR "psychiatric admission*"[tiab] OR
+  hospitali*[tiab] OR "mental health service*"[tiab] OR "psychiatric service*"[tiab] OR
+  wellbeing[tiab] OR "well-being"[tiab] OR "well being"[tiab] OR
+  "life satisfaction"[tiab] OR happiness[tiab] OR
+  "positive affect"[tiab] OR "negative affect"[tiab] OR
+  "quality of life"[tiab] OR "quality-of-life"[tiab] OR
+  "eco-anxiety"[tiab] OR "climate anxiety"[tiab] OR solastalgia[tiab] OR
+  "ecological grief"[tiab] OR "climate-related distress"[tiab] OR
+  PHQ-9[tiab] OR GAD-7[tiab] OR K6[tiab] OR K10[tiab] OR Kessler[tiab] OR
+  GHQ-12[tiab] OR MHI-5[tiab] OR CES-D[tiab] OR "Beck Depression"[tiab] OR
+  BDI[tiab] OR HADS[tiab] OR PCL-5[tiab] OR IES-R[tiab] OR PSS[tiab] OR
+  "Cantril Ladder"[tiab] OR SWLS[tiab] OR PANAS[tiab] OR
+  "climate anxiety scale"[tiab]
+)
+NOT (animals[mh] NOT humans[mh])

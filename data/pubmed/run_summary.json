@@ -1,0 +1,198 @@
+{
+  "pmids_collected": 27731,
+  "stored_records": 27731,
+  "api_calls": 139,
+  "elapsed_seconds": 216.8,
+  "slices": [
+    {
+      "bucket": "pre1990",
+      "count": 1816,
+      "ids_returned": 1816
+    },
+    {
+      "bucket": "y1990",
+      "count": 157,
+      "ids_returned": 157
+    },
+    {
+      "bucket": "y1991",
+      "count": 144,
+      "ids_returned": 144
+    },
+    {
+      "bucket": "y1992",
+      "count": 151,
+      "ids_returned": 151
+    },
+    {
+      "bucket": "y1993",
+      "count": 194,
+      "ids_returned": 194
+    },
+    {
+      "bucket": "y1994",
+      "count": 177,
+      "ids_returned": 177
+    },
+    {
+      "bucket": "y1995",
+      "count": 172,
+      "ids_returned": 172
+    },
+    {
+      "bucket": "y1996",
+      "count": 191,
+      "ids_returned": 191
+    },
+    {
+      "bucket": "y1997",
+      "count": 210,
+      "ids_returned": 210
+    },
+    {
+      "bucket": "y1998",
+      "count": 186,
+      "ids_returned": 186
+    },
+    {
+      "bucket": "y1999",
+      "count": 192,
+      "ids_returned": 192
+    },
+    {
+      "bucket": "y2000",
+      "count": 216,
+      "ids_returned": 216
+    },
+    {
+      "bucket": "y2001",
+      "count": 259,
+      "ids_returned": 259
+    },
+    {
+      "bucket": "y2002",
+      "count": 269,
+      "ids_returned": 269
+    },
+    {
+      "bucket": "y2003",
+      "count": 286,
+      "ids_returned": 286
+    },
+    {
+      "bucket": "y2004",
+      "count": 348,
+      "ids_returned": 348
+    },
+    {
+      "bucket": "y2005",
+      "count": 451,
+      "ids_returned": 451
+    },
+    {
+      "bucket": "y2006",
+      "count": 483,
+      "ids_returned": 483
+    },
+    {
+      "bucket": "y2007",
+      "count": 567,
+      "ids_returned": 567
+    },
+    {
+      "bucket": "y2008",
+      "count": 660,
+      "ids_returned": 660
+    },
+    {
+      "bucket": "y2009",
+      "count": 770,
+      "ids_returned": 770
+    },
+    {
+      "bucket": "y2010",
+      "count": 765,
+      "ids_returned": 765
+    },
+    {
+      "bucket": "y2011",
+      "count": 784,
+      "ids_returned": 784
+    },
+    {
+      "bucket": "y2012",
+      "count": 899,
+      "ids_returned": 899
+    },
+    {
+      "bucket": "y2013",
+      "count": 1003,
+      "ids_returned": 1003
+    },
+    {
+      "bucket": "y2014",
+      "count": 1041,
+      "ids_returned": 1041
+    },
+    {
+      "bucket": "y2015",
+      "count": 1114,
+      "ids_returned": 1114
+    },
+    {
+      "bucket": "y2016",
+      "count": 1213,
+      "ids_returned": 1213
+    },
+    {
+      "bucket": "y2017",
+      "count": 1195,
+      "ids_returned": 1195
+    },
+    {
+      "bucket": "y2018",
+      "count": 1264,
+      "ids_returned": 1264
+    },
+    {
+      "bucket": "y2019",
+      "count": 1390,
+      "ids_returned": 1390
+    },
+    {
+      "bucket": "y2020",
+      "count": 1609,
+      "ids_returned": 1609
+    },
+    {
+      "bucket": "y2021",
+      "count": 1883,
+      "ids_returned": 1883
+    },
+    {
+      "bucket": "y2022",
+      "count": 1858,
+      "ids_returned": 1858
+    },
+    {
+      "bucket": "y2023",
+      "count": 1885,
+      "ids_returned": 1885
+    },
+    {
+      "bucket": "y2024",
+      "count": 2029,
+      "ids_returned": 2029
+    },
+    {
+      "bucket": "y2025",
+      "count": 2308,
+      "ids_returned": 2308
+    },
+    {
+      "bucket": "y2026",
+      "count": 1028,
+      "ids_returned": 1028
+    }
+  ]
+}

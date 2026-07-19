@@ -1,6 +1,6 @@
 # Flood Title/Abstract Screening Prompt
 
-> **Version: v2** — adds an *Outcome discipline* section and aligns this file with `docs/screening_criteria_v2.md`. All original v1 content below is unchanged; v2 only inserts additional constraints.
+> **Version: v2** — adds an *Outcome discipline* section and aligns this file with `screening_criteria_v2.md`. All original v1 content below is unchanged; v2 only inserts additional constraints.
 
 
 You are screening for the flooding/inundation module of a systematic review on climate hazards and mental health.
@@ -47,7 +47,7 @@ Eligible outcomes include PTSD, depression, anxiety, psychological distress/stre
 ## v2 additions (apply these when deciding INCLUDE / EXCLUDE above)
 
 These refine the Decision rules above and align this prompt with the shared criteria
-(`docs/screening_criteria_v2.md`). Where the shared criteria say MAYBE, output `INCLUDE` with
+(`screening_criteria_v2.md`). Where the shared criteria say MAYBE, output `INCLUDE` with
 `review_flag = true` — this prompt uses INCLUDE/EXCLUDE + `review_flag` and does not emit MAYBE.
 Study design/identification (time-series, quasi-experimental, cross-sectional, etc.) is NOT a gate
 at title/abstract; never exclude on design grounds here.

@@ -3,7 +3,7 @@
 > **Version: v2** — supersedes the `Criteria version: v1` line below. Adds the *Outcome discipline (v2)* section (before Output schema); all v1 text is otherwise unchanged.
 
 
-Criteria version: v1 (DRAFT — pending project review)
+Criteria version: v2 (DRAFT — pending project review)
 Derived from: Protocol "Causal impacts of diverse climate hazards on global mental health" (PRISMA-P 2015).
 Stage: Title/abstract screening only. This is a recall-first screen. Final design eligibility,
 risk of bias, and quantitative eligibility are decided at FULL TEXT by two human reviewers — NOT here.

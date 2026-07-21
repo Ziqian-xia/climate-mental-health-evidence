@@ -1,6 +1,6 @@
 # Drought Title/Abstract Screening Prompt
 
-> **Version: v2** — adds an *Outcome discipline* section and aligns this file with `screening_criteria_v2.md`. All original v1 content below is unchanged; v2 only inserts additional constraints.
+> **Version: v2.1** — adds non-original / evidence-synthesis discipline and protects measured post-hazard wellbeing/resilience outcomes.
 
 
 You are screening for the drought/water scarcity module of a systematic review on climate hazards and mental health.
@@ -89,8 +89,28 @@ Do NOT use this rule to exclude the following - they ARE eligible (keep them):
   service disruption;
 - a record reporting BOTH a physical outcome AND an eligible mental-health outcome - keep it for the
   mental-health component;
+- measured subjective wellbeing, life satisfaction, quality of life, affect, psychological resilience,
+  coping, or disaster-related resilience among people exposed to drought/water scarcity; if the abstract
+  is incomplete, use `INCLUDE` with `review_flag = true`, do not EXCLUDE;
 - a record where an eligible mental-health outcome is plausibly present but the abstract is
   incomplete - use `INCLUDE` with `review_flag = true`, do not EXCLUDE.
+
+### Non-original / evidence-synthesis discipline
+
+`EXCLUDE` as `non_original` when the record is a systematic review, scoping review, narrative review,
+umbrella review, integrative review, meta-analysis, evidence map, protocol, editorial, commentary,
+letter, news item, guideline, policy overview, or methods/tutorial paper. This remains true even if
+the abstract discusses drought and mental-health outcomes from included studies.
+
+For machine-learning or prediction-model papers, `INCLUDE` only when the paper applies a model to
+original human participant, administrative, service-use, or area-time data to estimate or predict an
+eligible mental-health/wellbeing outcome after drought/water scarcity exposure. `EXCLUDE` as
+`non_original` when it is a review of machine-learning tools, a survey of algorithms, a benchmark of
+published studies, or a methods paper with no original hazard-exposed human mental-health data.
+
+If the abstract is genuinely unclear whether the record is original empirical research, use
+`INCLUDE` with `review_flag = true`. If it clearly says "systematic review", "scoping review",
+"meta-analysis", "review", "protocol", "commentary", or "editorial", EXCLUDE.
 
 Return exactly one JSON object:
 

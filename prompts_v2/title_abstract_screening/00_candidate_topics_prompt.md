@@ -1,6 +1,6 @@
 # Candidate Topics Labeling Prompt
 
-> **Version: v2** — adds an *Outcome discipline* section and aligns this file with `screening_criteria_v2.md`. All original v1 content below is unchanged; v2 only inserts additional constraints.
+> **Version: v2.1** — aligned with `screening_criteria_v2.md`; routing remains limited to the five registered hazard modules.
 
 
 You are labeling candidate hazard topics for title/abstract records in a systematic review on climate hazards and mental health.

@@ -1,9 +1,9 @@
 # Title/Abstract Screening Criteria: Causal Impacts of Diverse Climate Hazards on Global Mental Health
 
-> **Version: v2** — supersedes the `Criteria version: v1` line below. Adds the *Outcome discipline (v2)* section (before Output schema); all v1 text is otherwise unchanged.
+> **Version: v2.1** — supersedes v2. Adds *Non-original / evidence-synthesis discipline* and protects measured post-hazard wellbeing/resilience outcomes.
 
 
-Criteria version: v2 (DRAFT — pending project review)
+Criteria version: v2.1 (DRAFT — pending project review)
 Derived from: Protocol "Causal impacts of diverse climate hazards on global mental health" (PRISMA-P 2015).
 Stage: Title/abstract screening only. This is a recall-first screen. Final design eligibility,
 risk of bias, and quantitative eligibility are decided at FULL TEXT by two human reviewers — NOT here.
@@ -194,11 +194,34 @@ Protected (do NOT exclude under this rule - these remain eligible):
   though they are "mortality";
 - psychiatric ED visits, psychiatric admissions, mental-health service use or service disruption (Y3);
 - records reporting BOTH a physical AND an eligible mental-health outcome (keep for the MH component);
+- measured subjective wellbeing, life satisfaction, quality of life, affect, psychological resilience,
+  coping, or disaster-related resilience among people exposed to a registered hazard; if the abstract
+  is incomplete, route to MAYBE rather than EXCLUDE;
 - records where an eligible MH outcome is plausibly present but the abstract is incomplete -> MAYBE
   (do not EXCLUDE).
 
 This section refines exclusion code `wrong_outcome` in the Exclude list above; all MAYBE routing in
 Boundary cases still applies.
+
+## Non-original / evidence-synthesis discipline (v2.1)
+
+EXCLUDE as `non_original` when the record is a systematic review, scoping review, narrative review,
+umbrella review, integrative review, meta-analysis, evidence map, protocol, editorial, commentary,
+letter, news item, guideline, policy overview, or methods/tutorial paper. This remains true even if
+the abstract discusses eligible hazards and mental-health outcomes from included studies.
+
+For machine-learning or prediction-model papers:
+
+- INCLUDE/MAYBE only when the paper applies a model to original human participant, administrative,
+  service-use, or area-time data to estimate or predict an eligible mental-health/wellbeing outcome
+  after a registered hazard.
+- EXCLUDE as `non_original` when the paper is a review of machine-learning tools, a survey of
+  algorithms, a benchmark of published studies, or a methods paper with no original hazard-exposed
+  human mental-health data.
+
+If the abstract is genuinely unclear whether the record is original empirical research, route to
+MAYBE rather than EXCLUDE. If it clearly says "systematic review", "scoping review", "meta-analysis",
+"review", "protocol", "commentary", or "editorial", EXCLUDE.
 
 ## Output schema
 

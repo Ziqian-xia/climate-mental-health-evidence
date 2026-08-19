@@ -386,7 +386,22 @@ def find_default_excel():
 
 
 def header_map(ws):
-    return {ws.cell(1, c).value: c for c in range(1, ws.max_column + 1)}
+    """Map canonical field names plus common lowercase/underscore variants."""
+    aliases = {
+        "dedup_id": "Dedup Id",
+        "title": "Title",
+        "abstract": "Abstract",
+        "human_decision": "Human Decision",
+        "human_notes": "Audit Notes",
+    }
+    out = {}
+    for c in range(1, ws.max_column + 1):
+        value = ws.cell(1, c).value
+        if value is None:
+            continue
+        out[value] = c
+        out.setdefault(aliases.get(str(value).strip().lower()), c)
+    return {k: v for k, v in out.items() if k is not None}
 
 
 def ensure_column(ws, headers, title):

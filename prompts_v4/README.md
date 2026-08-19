@@ -391,3 +391,14 @@ within-unit variation (panel pre/post, case-crossover, time-series). The risk to
 **recall**: abstracts often omit the design, so the explicit-only rule and the review route for
 unstated designs are what keep eligible studies from being dropped. Final recall will be confirmed
 against the completed human labels from this packet.
+
+## Completed v4 human-alignment validation
+
+The completed 300-paper validation used `deepseek-v4-flash` with the v4 prompt set and the
+pairwise human-review labels. The AI returned **272 EXCLUDE, 20 REVIEW, and 8 INCLUDE** decisions,
+with no API or parsing errors. Mapping human `MAYBE` to `REVIEW`, pooled AI–human agreement was
+94.3% and **Cohen's κ = 0.673** across 600 label pairs. Per-rater kappas were **0.664 for Jacob**
+and **0.683 for Tony**; human–human κ was **0.540** on the same 300 papers.
+
+Full methods, distributions, and reproducibility paths are recorded in
+[`results_v4_validation_300.md`](results_v4_validation_300.md).

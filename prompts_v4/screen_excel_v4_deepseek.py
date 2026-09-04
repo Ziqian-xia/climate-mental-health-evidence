@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Screen the reviewer packet (Ziqian / Jacob / Tony sheets) with the v4 prompts on DeepSeek.
+Screen the reviewer packet (Ziqian / Jacob / Tony sheets) with the v4.1 prompts on DeepSeek.
 
-The six v4 prompts are fetched from GitHub by default, so a collaborator can clone this
+The seven v4.1 prompts are fetched from GitHub by default, so a collaborator can clone this
 repository (or just download this single file) and run it without editing any paths. If the
 network is unavailable the script falls back to a local `prompts_v4/` folder and says so.
 
@@ -18,8 +18,8 @@ the same result is written to every row carrying that dedup id.
 
 Every record is written out the moment it is screened, one JSON object per line, to a
 `*_records.jsonl` log that keeps the RAW router and module replies - candidate topics and
-their confidences, needs_human_topic_review, each module's decision / review_flag /
-exclusion_code / confidence / notes, and the raw text of any reply that failed to parse.
+their confidences, needs_human_topic_review, each module's decision / exclusion_code /
+confidence / notes, and the raw text of any reply that failed to parse.
 The Excel file only carries the aggregated decision, so the JSONL is the provenance record
 and the resume source: an interrupted run picks up from it and re-screens nothing.
 
@@ -56,6 +56,7 @@ PROMPT_DIR_IN_REPO = "prompts_v4"          # root-level in this repo; no subfold
 # logical name -> file name inside PROMPT_DIR_IN_REPO
 PROMPT_FILES = {
     "router":      "00_candidate_topics_prompt.md",
+    "shared":      "shared_module_rules.md",
     "temperature": "01_temperature_prompt.md",
     "wildfire":    "02_wildfire_prompt.md",
     "flood":       "03_flood_prompt.md",
@@ -63,9 +64,9 @@ PROMPT_FILES = {
     "drought":     "05_drought_prompt.md",
 }
 
-# Every v4 prompt, including the router, carries this marker. Used as a version guard so a
+# Every v4.1 prompt, including the router, carries this marker. Used as a version guard so a
 # stale or wrong-version file can never be screened with silently.
-VERSION_MARKER = "**Version: v4**"
+VERSION_MARKER = "**Version: v4.1**"
 
 DEFAULT_EXCEL_NAME = "review_packet_pairwise.xlsx"
 DEFAULT_SHEETS = ["Ziqian", "Jacob", "Tony"]
@@ -80,7 +81,7 @@ MAX_TOKENS = 3000
 MAX_TOKENS_RETRY = 6000
 PAUSE_SEC = 0.2
 HTTP_TIMEOUT = 30
-CRITERIA_VERSION = "per-topic prompt set 00-05 v4 (outcome + design discipline + temperature setting requirement)"
+CRITERIA_VERSION = "per-topic prompt set v4.1 (consistent three-way decisions and conservative review routing)"
 # -----------------------------------------------------------------
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -127,7 +128,7 @@ def fetch_prompts_from_github(ref):
 
 
 def find_local_prompt_dir(explicit):
-    """Return a directory that contains all six prompt files, or None."""
+    """Return a directory that contains all seven prompt components, or None."""
     candidates = []
     if explicit:
         candidates.append(explicit)
@@ -167,8 +168,8 @@ def load_prompts(args):
 
     if args.prompts_dir:
         if not local_dir:
-            die("--prompts-dir was given but that folder does not contain all six prompt "
-                "files (00-05):\n  {}".format(args.prompts_dir))
+                die("--prompts-dir was given but that folder does not contain all seven prompt "
+                    "files (router, shared rules, and 01-05):\n  {}".format(args.prompts_dir))
         prompts = load_prompts_from_dir(local_dir)
         source = "local folder {} (forced with --prompts-dir)".format(local_dir)
     else:
@@ -178,7 +179,7 @@ def load_prompts(args):
         except Exception as e:
             log("      Could not reach GitHub: {}".format(str(e)[:160]))
             if not local_dir:
-                die("GitHub is unreachable and no local copy of the six v4 prompts was found.\n"
+                die("GitHub is unreachable and no local copy of the seven v4.1 prompts was found.\n"
                     "Either connect to the network (a phone hotspot usually works), or pass\n"
                     "  --prompts-dir <folder containing 00_..05_ prompt .md files>")
             log("      Falling back to the local copy.")
@@ -187,8 +188,8 @@ def load_prompts(args):
 
     check_version(prompts, source)
     log("      Prompt source: {}".format(source))
-    log("      Loaded {} prompts; temperature prompt = {} chars "
-        "(v4 ~11832, v3 ~8829, v2 ~5900, v1 ~2600).".format(len(prompts), len(prompts["temperature"])))
+    log("      Loaded {} prompt components; shared rules = {} chars, temperature topic = {} chars."
+        .format(len(prompts), len(prompts["shared"]), len(prompts["temperature"])))
     return prompts, source
 
 
@@ -322,6 +323,95 @@ def call_model(client, model, system_prompt, record):
             "_hint": ("reply was truncated - raise MAX_TOKENS" if finish == "length" else None)}
 
 
+VALID_TOPICS = {"temperature", "wildfire", "flood", "cyclone", "drought"}
+VALID_DECISIONS = {"INCLUDE", "REVIEW", "EXCLUDE"}
+VALID_EXCLUSION_CODES = {
+    "not_human_empirical",
+    "non_original",
+    "wrong_exposure",
+    "wrong_outcome",
+    "wrong_design",
+}
+
+
+def as_bool(value):
+    """Parse model JSON booleans without treating the string 'false' as true."""
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"true", "yes", "1"}
+    return bool(value)
+
+
+def aggregate_screening(router, modules):
+    """Aggregate validated router/module JSON into one conservative decision."""
+    raw_topics = router.get("candidate_topics", [])
+    if not isinstance(raw_topics, list):
+        return "REVIEW", "Router returned an invalid candidate_topics field."
+
+    topics = []
+    invalid_topics = []
+    for topic in raw_topics:
+        if topic in VALID_TOPICS and topic not in topics:
+            topics.append(topic)
+        elif topic not in VALID_TOPICS:
+            invalid_topics.append(str(topic))
+
+    if not topics:
+        if as_bool(router.get("needs_human_topic_review", False)):
+            return "REVIEW", str(router.get("one_line_reason") or
+                                 "Eligible topic is unclear and needs human review.")[:300]
+        if invalid_topics:
+            return "REVIEW", "Router returned unsupported topic(s): " + ", ".join(invalid_topics)
+        return "EXCLUDE", "No eligible registered hazard identified."
+
+    per = []
+    saw_include = False
+    saw_review = bool(invalid_topics)
+    seen_topics = set()
+    for item in modules:
+        topic = item.get("topic")
+        out = item.get("raw", {})
+        seen_topics.add(topic)
+        if not isinstance(out, dict) or "_error" in out:
+            per.append("{}: ERROR".format(topic))
+            saw_review = True
+            continue
+
+        decision = str(out.get("decision", "")).upper()
+        code = str(out.get("exclusion_code", ""))
+        why = str(out.get("one_line_reason", ""))[:150]
+        if decision not in VALID_DECISIONS:
+            per.append("{}: INVALID_DECISION - {}".format(topic, why))
+            saw_review = True
+            continue
+        if decision == "EXCLUDE" and code not in VALID_EXCLUSION_CODES:
+            per.append("{}: EXCLUDE [invalid code {}] - {}".format(topic, code or "missing", why))
+            saw_review = True
+        elif decision != "EXCLUDE" and code not in {"", "NA"}:
+            per.append("{}: {} [invalid code {}] - {}".format(topic, decision, code, why))
+            saw_review = True
+        else:
+            per.append("{}: {}{} - {}".format(
+                topic, decision, " [{}]".format(code) if code and code != "NA" else "", why))
+        if decision == "INCLUDE":
+            saw_include = True
+        elif decision == "REVIEW":
+            saw_review = True
+
+    missing = set(topics) - seen_topics
+    if missing:
+        per.append("missing module result: " + ", ".join(sorted(missing)))
+        saw_review = True
+
+    reason = " | ".join(per)
+    if saw_review:
+        return "REVIEW", reason
+    if saw_include:
+        return "INCLUDE", reason
+    return "EXCLUDE", reason
+
+
 def screen_one(client, model, prompts, record):
     """Router assigns hazard topics, then one prompt per topic decides.
 
@@ -338,41 +428,26 @@ def screen_one(client, model, prompts, record):
         return "ERROR", "router failed: " + str(router["_error"])[:150], detail
 
     topics = router.get("candidate_topics", []) or []
+    if not isinstance(topics, list):
+        return "REVIEW", "Router returned an invalid candidate_topics field.", detail
     detail["topics"] = topics
     if not topics:
-        return "EXCLUDE", "No eligible registered hazard identified.", detail
+        decision, reason = aggregate_screening(router, [])
+        return decision, reason, detail
 
-    per, any_inc, inc_rev, any_rev = [], False, False, False
     for tp in topics:
-        if tp not in prompts:
+        if tp not in VALID_TOPICS or tp not in prompts:
+            detail["modules"].append({
+                "topic": tp,
+                "raw": {"_error": "unsupported topic returned by router"},
+            })
             continue
-        out = call_model(client, model, prompts[tp], record)
+        module_prompt = prompts["shared"] + "\n\n" + prompts[tp]
+        out = call_model(client, model, module_prompt, record)
         detail["modules"].append({"topic": tp, "raw": out})
-        if "_error" in out:
-            per.append("{}: ERROR".format(tp))
-            any_rev = True
-            continue
-        dec = str(out.get("decision", "")).upper()
-        rf = bool(out.get("review_flag", False))
-        code = out.get("exclusion_code", "")
-        why = str(out.get("one_line_reason", ""))[:150]
-        per.append("{}: {}{} - {}".format(
-            tp, dec, " [{}]".format(code) if code and code != "NA" else "", why))
-        if dec == "INCLUDE":
-            any_inc = True
-            if rf:
-                inc_rev = True
-        elif dec == "MAYBE":
-            any_rev = True
-        if rf:
-            any_rev = True
 
-    reason = " | ".join(per)
-    if any_inc:
-        return ("REVIEW" if inc_rev else "INCLUDE"), reason, detail
-    if any_rev:
-        return "REVIEW", reason, detail
-    return "EXCLUDE", reason, detail
+    decision, reason = aggregate_screening(router, detail["modules"])
+    return decision, reason, detail
 
 
 # ------------------------- excel helpers -------------------------
@@ -431,7 +506,7 @@ def main():
     sheets = [s.strip() for s in args.sheets.split(",") if s.strip()]
 
     log("=" * 72)
-    log("  Reviewer packet screening - v4 prompts on DeepSeek")
+    log("  Reviewer packet screening - v4.1 prompts on DeepSeek")
     log("=" * 72)
 
     excel_in = args.inp or find_default_excel()

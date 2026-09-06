@@ -64,7 +64,7 @@ Remaining REVIEW decisions are not repeatedly sent again on resume.
 
 - [First-pass results and frozen baseline](round1_full/results/README.md)
 - [Final merged results](round2_review/results/README.md)
-- [Large result attachments](https://github.com/Ziqian-xia/climate-mental-health-evidence/releases/tag/final-screening-v1)
+- [Large result attachments](https://github.com/Ziqian-xia/climate-mental-health-evidence/releases/tag/final-screening)
 
 The repository contains one REVIEW CSV per pass. Full CSVs and compressed full
 JSONs are distributed as Release attachments:
@@ -76,8 +76,7 @@ final-result.csv
 final-result.json.gz
 ~~~
 
-The Release links are configured for tag final-screening-v1; they become live after
-the maintainer uploads the accompanying assets and publishes that Release.
+The Release links point to the published tag final-screening.
 
 ## Reproduction
 
@@ -121,4 +120,8 @@ source and asset hashes and the two execution fingerprints.
 The two prompts_v4 directories inside this folder are the authoritative snapshots
 for these two passes. Other prompt and pilot folders elsewhere in the repository
 are historical materials. No virtual environments, caches, API keys, test files,
-or downloaded input dataset are included here.
+or downloaded input dataset are included here. Missing optional ignore files
+are not required by the published checksum manifests.
+
+Download the source ZIP or preserve file bytes when checking out with Git.
+Automatic line-ending conversion can change the recorded source hashes.

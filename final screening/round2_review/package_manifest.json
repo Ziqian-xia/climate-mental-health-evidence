@@ -27,7 +27,6 @@
     "screen_fast.py": "dc9d3cdbd6fda81409570ed918301918e614e4d9ffce979b1052405ecdc5734e",
     "requirements.txt": "f1df97f4e38bd8b5421cbd5941ecd5dba652beafd1a646814250aed0f2203f55",
     "README.md": "b5c0f37c051f840feea4dd9e73552042ba5825f6e4e4bc27adba88a4eef48638",
-    ".gitignore": "dc985679ae01eca647af11481b2a74985d8551eaeccf9ca40484aa7205ac79c3",
     "prompts_v4/00_candidate_topics_prompt.md": "eab0f73fe1439f4cc71cb4b73ea510707b508af471f58ee4baa0a74a87949cf8",
     "prompts_v4/01_temperature_prompt.md": "6a82f2b859559d005e93a12df65e262f761aec4292bde0614ff345ba365b14a5",
     "prompts_v4/02_wildfire_prompt.md": "edaf42955cc5774bd2a3a3be45a82cdde54278248a495fc593859e46ea2f5317",
@@ -37,7 +36,7 @@
     "prompts_v4/screening_criteria_v4.md": "c318204dd972d919d787bc8db8d8c5fbe9f41b0ad0e265ccc42a8feba00a3e72",
     "prompts_v4/shared_module_rules.md": "0553f4341e91e96c9bafe3d62199d6a8c1ad7cd12d7fae58a0ebd977aa6149f9",
     "rerun_review.py": "f0871bca30e215a8f0a12474154f00abf483fc69df11664489200b8eda206420",
-    "START_REVIEW.md": "bbce81f5188cc710f746c85920b26f5a21bbeafd7466bc34faee8dcfcde8ab78"
+    "START_REVIEW.md": "218725c9ec07883f05d6caf78d1252b7c8b9ba79bc7e30e61164dc7209a003f3"
   },
   "changed_original_files": [
     "README.md",
@@ -46,6 +45,10 @@
   "publication_packaging": {
     "layout": "final screening/round2_review",
     "original_execution_package_manifest_sha256": "41c17684069d371269da444b7f13ba845dcc60d252c507f9a27990d025ec7427",
-    "changes": "Documentation paths and associated checksums only. Executable source, dependencies, prompts, and archived results are unchanged."
+    "changes": "Documentation paths and associated checksums only. Executable source, dependencies, prompts, and archived results are unchanged.",
+    "link_repair": "Download URLs use the existing final-screening Release. Documentation hashes are refreshed; optional ignore files absent from the published tree are not runtime prerequisites.",
+    "optional_missing_files": [
+      ".gitignore"
+    ]
   }
 }

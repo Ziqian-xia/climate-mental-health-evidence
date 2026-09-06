@@ -19,13 +19,14 @@ the human topic review flag. The original hazard definitions remain unchanged.
 Both original Python scripts, requirements.txt, and all seven other prompt files
 are byte-for-byte identical to the baseline package. The workflow adds
 rerun_review.py, these instructions, and package_manifest.json. Documentation
-paths and checksums were updated for this publication layout. The entry point
+paths and checksums were updated for this publication layout. The download
+links use the published final-screening tag. The entry point
 checks the released file hashes before proceeding.
 
 ## Required baseline
 
-[Download the frozen baseline](https://github.com/Ziqian-xia/climate-mental-health-evidence/releases/download/final-screening-v1/round1-result.json.gz).
-This link becomes available when the accompanying Release is published.
+[Download the frozen baseline](https://github.com/Ziqian-xia/climate-mental-health-evidence/releases/download/final-screening/round1-result.json.gz).
+The frozen baseline is available from the published Release.
 
 Provide the **original full result.json**, or the separately supplied compressed
 copy, round1-result.json.gz. A REVIEW CSV alone lacks the full

@@ -1,0 +1,51 @@
+{
+  "baseline_result_json_sha256": "5e17a7006d6c0f96e64809d230a6119209cccdfce4cfc8a2f069129d90a3c023",
+  "baseline_records": 131468,
+  "baseline_decision_counts": {
+    "EXCLUDE": 123543,
+    "INCLUDE": 708,
+    "REVIEW": 7217
+  },
+  "baseline_run_fingerprint": "b582897c67e371d6adc4be725da083f219a87e74ee8f4d4376b0903ae1397c43",
+  "original_file_sha256": {
+    "run.py": "9d22ad74c63a4181f6fe6fbebd1d67966bb8c7f50f116097f5d9ebd776ac7b3c",
+    "screen_fast.py": "dc9d3cdbd6fda81409570ed918301918e614e4d9ffce979b1052405ecdc5734e",
+    "requirements.txt": "f1df97f4e38bd8b5421cbd5941ecd5dba652beafd1a646814250aed0f2203f55",
+    "README.md": "94a3f4c2424bd8a59953ee9b7683560a700d28c46aba7e18676243e432d075be",
+    ".gitignore": "dc985679ae01eca647af11481b2a74985d8551eaeccf9ca40484aa7205ac79c3",
+    "prompts_v4/00_candidate_topics_prompt.md": "f9248c4af1c28b9d8ea4830f26a30c5e76642f97f05246a86994453942b1ffd6",
+    "prompts_v4/01_temperature_prompt.md": "6a82f2b859559d005e93a12df65e262f761aec4292bde0614ff345ba365b14a5",
+    "prompts_v4/02_wildfire_prompt.md": "edaf42955cc5774bd2a3a3be45a82cdde54278248a495fc593859e46ea2f5317",
+    "prompts_v4/03_flood_prompt.md": "ec44c2c567ba3a06cf9e2d88602bc8fb850fd55a09b9e56461de4964f353652c",
+    "prompts_v4/04_cyclone_prompt.md": "ee56046305089705d9e2bd5b6b848784e9939ed9dda2ec7c3bb6fe2051a397e1",
+    "prompts_v4/05_drought_prompt.md": "95431ec316c5da61a097c61bd251f8558a1791b07dff2f63d12cc4fa828b56f7",
+    "prompts_v4/screening_criteria_v4.md": "c318204dd972d919d787bc8db8d8c5fbe9f41b0ad0e265ccc42a8feba00a3e72",
+    "prompts_v4/shared_module_rules.md": "0553f4341e91e96c9bafe3d62199d6a8c1ad7cd12d7fae58a0ebd977aa6149f9"
+  },
+  "package_file_sha256": {
+    "run.py": "9d22ad74c63a4181f6fe6fbebd1d67966bb8c7f50f116097f5d9ebd776ac7b3c",
+    "screen_fast.py": "dc9d3cdbd6fda81409570ed918301918e614e4d9ffce979b1052405ecdc5734e",
+    "requirements.txt": "f1df97f4e38bd8b5421cbd5941ecd5dba652beafd1a646814250aed0f2203f55",
+    "README.md": "b5c0f37c051f840feea4dd9e73552042ba5825f6e4e4bc27adba88a4eef48638",
+    ".gitignore": "dc985679ae01eca647af11481b2a74985d8551eaeccf9ca40484aa7205ac79c3",
+    "prompts_v4/00_candidate_topics_prompt.md": "eab0f73fe1439f4cc71cb4b73ea510707b508af471f58ee4baa0a74a87949cf8",
+    "prompts_v4/01_temperature_prompt.md": "6a82f2b859559d005e93a12df65e262f761aec4292bde0614ff345ba365b14a5",
+    "prompts_v4/02_wildfire_prompt.md": "edaf42955cc5774bd2a3a3be45a82cdde54278248a495fc593859e46ea2f5317",
+    "prompts_v4/03_flood_prompt.md": "ec44c2c567ba3a06cf9e2d88602bc8fb850fd55a09b9e56461de4964f353652c",
+    "prompts_v4/04_cyclone_prompt.md": "ee56046305089705d9e2bd5b6b848784e9939ed9dda2ec7c3bb6fe2051a397e1",
+    "prompts_v4/05_drought_prompt.md": "95431ec316c5da61a097c61bd251f8558a1791b07dff2f63d12cc4fa828b56f7",
+    "prompts_v4/screening_criteria_v4.md": "c318204dd972d919d787bc8db8d8c5fbe9f41b0ad0e265ccc42a8feba00a3e72",
+    "prompts_v4/shared_module_rules.md": "0553f4341e91e96c9bafe3d62199d6a8c1ad7cd12d7fae58a0ebd977aa6149f9",
+    "rerun_review.py": "f0871bca30e215a8f0a12474154f00abf483fc69df11664489200b8eda206420",
+    "START_REVIEW.md": "bbce81f5188cc710f746c85920b26f5a21bbeafd7466bc34faee8dcfcde8ab78"
+  },
+  "changed_original_files": [
+    "README.md",
+    "prompts_v4/00_candidate_topics_prompt.md"
+  ],
+  "publication_packaging": {
+    "layout": "final screening/round2_review",
+    "original_execution_package_manifest_sha256": "41c17684069d371269da444b7f13ba845dcc60d252c507f9a27990d025ec7427",
+    "changes": "Documentation paths and associated checksums only. Executable source, dependencies, prompts, and archived results are unchanged."
+  }
+}

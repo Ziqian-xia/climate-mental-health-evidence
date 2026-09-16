@@ -15,6 +15,8 @@ V4 Pro.
 - `results/strict_inc_screening_report.md`: concise results report.
 - `results/two_model_screening.csv`: primary 802-row action table.
 - `results/model_disagreements.csv`: 139 exact disagreements, including 64 cross-boundary decisions.
+- `results/human_review_queue.xlsx`: formatted manual adjudication workbook with priority and optional
+  review queues.
 
 ## Main result
 
@@ -56,6 +58,8 @@ adjudication should begin with the 64 records where the models disagree across t
 - `results/deepseek_v4_pro_summary.json`: DeepSeek counts, hashes, and token usage.
 - `results/two_model_screening.csv`: primary combined action table.
 - `results/model_disagreements.csv`: disagreement review queue.
+- `results/human_review_queue.xlsx`: manual review workbook with validated decision, reason-code,
+  confidence, reviewer, notes, and date fields.
 - `results/model_comparison_summary.json`: agreement statistics and confusion matrix.
 - `results/strict_inc_screening_report.md`: concise scientific summary and recommended next step.
 

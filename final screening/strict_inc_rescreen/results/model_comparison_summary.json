@@ -1,0 +1,52 @@
+{
+  "records": 802,
+  "criteria_version": "strict-inc-v1.0",
+  "gpt_model": "gpt-5.6-sol",
+  "deepseek_model": "deepseek-v4-pro",
+  "gpt_decision_counts": {
+    "EXCLUDE": 35,
+    "FULLTEXT_REVIEW": 336,
+    "META_ELIGIBLE": 139,
+    "NARRATIVE_ONLY": 292
+  },
+  "deepseek_decision_counts": {
+    "EXCLUDE": 29,
+    "FULLTEXT_REVIEW": 307,
+    "META_ELIGIBLE": 160,
+    "NARRATIVE_ONLY": 306
+  },
+  "exact_four_category_agreement": 0.8266832917705735,
+  "cohen_kappa_four_category": 0.7391991952180982,
+  "advance_to_fulltext_agreement": 0.9201995012468828,
+  "cohen_kappa_advance_binary": 0.8353996036352674,
+  "disagreements": 139,
+  "cross_boundary_disagreements": 64,
+  "consensus_advance_to_fulltext": 439,
+  "consensus_do_not_advance": 299,
+  "confusion_gpt_rows_deepseek_columns": {
+    "META_ELIGIBLE": {
+      "META_ELIGIBLE": 124,
+      "FULLTEXT_REVIEW": 14,
+      "NARRATIVE_ONLY": 1,
+      "EXCLUDE": 0
+    },
+    "FULLTEXT_REVIEW": {
+      "META_ELIGIBLE": 36,
+      "FULLTEXT_REVIEW": 265,
+      "NARRATIVE_ONLY": 28,
+      "EXCLUDE": 7
+    },
+    "NARRATIVE_ONLY": {
+      "META_ELIGIBLE": 0,
+      "FULLTEXT_REVIEW": 22,
+      "NARRATIVE_ONLY": 261,
+      "EXCLUDE": 9
+    },
+    "EXCLUDE": {
+      "META_ELIGIBLE": 0,
+      "FULLTEXT_REVIEW": 6,
+      "NARRATIVE_ONLY": 16,
+      "EXCLUDE": 13
+    }
+  }
+}

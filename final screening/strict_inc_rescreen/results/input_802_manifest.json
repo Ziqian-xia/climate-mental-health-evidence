@@ -1,0 +1,9 @@
+{
+  "records": 802,
+  "source_final_result": "climate-final-result.csv",
+  "source_final_result_sha256": "73ed3e734cc979b337013da4f4d981857145ab1066a00e72efbb7cedb42c81e2",
+  "source_corpus": "data/merged_deduplicated_records.csv.gz",
+  "source_corpus_sha256": "1bd5b4b7917174907173a9fb59c82e8ec6fe060b1367255c7d4b7ad553fafddb",
+  "output": "final screening/strict_inc_rescreen/results/input_802.csv",
+  "output_sha256": "da1a5d2f8f428ce45cdc396a09ea048210c7589ea114d56933fadb9f36f7dcc6"
+}

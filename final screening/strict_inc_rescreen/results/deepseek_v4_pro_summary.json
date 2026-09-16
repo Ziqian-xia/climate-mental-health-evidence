@@ -1,0 +1,22 @@
+{
+  "criteria_version": "strict-inc-v1.0",
+  "model_requested": "deepseek-v4-pro",
+  "run_id": "dda80156ecce417959c4d49a8dc3d0f3b369e8f3ad30c7789cca8bf7bc49f58f",
+  "input_records": 802,
+  "completed_records": 802,
+  "error_records": 0,
+  "decision_counts": {
+    "EXCLUDE": 29,
+    "FULLTEXT_REVIEW": 307,
+    "META_ELIGIBLE": 160,
+    "NARRATIVE_ONLY": 306
+  },
+  "input_sha256": "da1a5d2f8f428ce45cdc396a09ea048210c7589ea114d56933fadb9f36f7dcc6",
+  "prompt_sha256": "2672b00878c0d7b52d3028845d8a201e1f13d5d895137ed29faa2e8fdf700978",
+  "jsonl_sha256": "0620a7d63becd4d04a78e39f2a57e03ab585debc18fd771e28d759425d68dd33",
+  "output_sha256": "cbbafbab5cde17900dad46a0993e3eb9c3d9904abea577a2d896ef3d0e448df8",
+  "input_tokens": 1365009,
+  "output_tokens": 1990396,
+  "total_tokens": 3355405,
+  "generated_at": "2026-09-16T17:45:17Z"
+}
